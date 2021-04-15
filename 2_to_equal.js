@@ -12,14 +12,14 @@ function twoSum(numbers, target) {
         let current = numbers[i]
 
         let number_to_find = target - current
-        console.log(number_to_find)
-        console.log(numbers.indexOf(current))
-        console.log(numbers.indexOf(number_to_find))
+      
         let first_number = numbers.indexOf(current)
+        numbers[i] = "X"
+      
         let match_sum = numbers.indexOf(number_to_find)
 
         if(match_sum >= 0){
-            found = [first_number, match_sum].reverse()
+            found = [first_number, match_sum]
             break;
         }
    
@@ -30,4 +30,5 @@ function twoSum(numbers, target) {
   console.log(found)
 }
 
-twoSum([1,2,3], 4)
+//twoSum([1,2,3], 4)
+twoSum([2,2,3], 4)
